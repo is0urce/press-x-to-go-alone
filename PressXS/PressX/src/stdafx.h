@@ -18,4 +18,6 @@
 #include <tchar.h>
 
 
-// TODO: reference additional headers your program requires here
+// common STL headers
+#include <stdexcept>
+#include <memory>
