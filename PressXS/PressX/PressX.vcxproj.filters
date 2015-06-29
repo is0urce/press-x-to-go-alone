@@ -39,12 +39,21 @@
     <ClInclude Include="src\color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\attribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PressX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\statistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
