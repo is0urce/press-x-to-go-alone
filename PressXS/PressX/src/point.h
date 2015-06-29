@@ -32,6 +32,7 @@ namespace px
 			Y -= rhs.Y;
 			return *this;
 		}
+
 		point moved(const point& move) const { point result = *this; return result += move; }
 		point moved(component x, component y) const { return moved(point(x, y)); }
 		point multiplied(const point &c) const { return point(X * c.X, Y * c.Y); }
@@ -40,6 +41,8 @@ namespace px
 		point clamped(const point& min, const point& max) const { return point((std::min)((std::max)(min.X, X), max.X), (std::min)((std::max)(min.Y, Y), max.Y)); }
 
 		// enumerators
+
+		// enumerate rectangle from start to start + range
 		void enumerate(const point &start, std::function<void(const point&)> enum_fn) const
 		{
 			point corner = start.moved(*this);
@@ -51,6 +54,7 @@ namespace px
 				}
 			}
 		}
+		// enumerable rectangle, this point value is range
 		void enumerate(std::function<void(const point&)> enum_fn) const
 		{
 			enumerate(point(0, 0), enum_fn);

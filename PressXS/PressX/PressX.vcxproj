@@ -80,6 +80,7 @@
     <ClInclude Include="src\Resource.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PressX.cpp" />
