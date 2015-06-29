@@ -78,6 +78,7 @@
     <ClInclude Include="src\color.h" />
     <ClInclude Include="src\coordinate.h" />
     <ClInclude Include="src\enhancement.h" />
+    <ClInclude Include="src\map.h" />
     <ClInclude Include="src\point.h" />
     <ClInclude Include="src\PressX.h" />
     <ClInclude Include="src\Resource.h" />
