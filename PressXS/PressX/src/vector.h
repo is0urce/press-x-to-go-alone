@@ -32,6 +32,7 @@ namespace px
 			Y -= rhs.Y;
 			return *this;
 		}
+
 		vector moved(const vector& move) const { vector result = *this; return result += move; };
 		vector clamped(const vector& min, const vector& max) const { return vector((std::min)((std::max)(min.X, X), max.X), (std::min)((std::max)(min.Y, Y), max.Y)); }
 	};
