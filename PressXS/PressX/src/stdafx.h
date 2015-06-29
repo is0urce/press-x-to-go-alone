@@ -21,3 +21,4 @@
 // common STL headers
 #include <stdexcept>
 #include <memory>
+#include <vector>

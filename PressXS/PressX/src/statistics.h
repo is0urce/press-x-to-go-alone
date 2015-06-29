@@ -18,8 +18,9 @@ namespace px
 		public:
 			typedef attribute attribute_t;
 			typedef int component;
+
 		private:
-			std::vector<component> _values;
+			std::vector<component> m_values;
 
 		public:
 			statistics();

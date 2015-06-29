@@ -77,6 +77,7 @@
     <ClInclude Include="src\attribute.h" />
     <ClInclude Include="src\color.h" />
     <ClInclude Include="src\coordinate.h" />
+    <ClInclude Include="src\enhancement.h" />
     <ClInclude Include="src\point.h" />
     <ClInclude Include="src\PressX.h" />
     <ClInclude Include="src\Resource.h" />
@@ -86,6 +87,7 @@
     <ClInclude Include="src\vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\enhancement.cpp" />
     <ClCompile Include="src\PressX.cpp" />
     <ClCompile Include="src\statistics.cpp" />
     <ClCompile Include="src\stdafx.cpp">
