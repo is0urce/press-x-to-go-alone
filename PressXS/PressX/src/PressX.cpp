@@ -4,8 +4,6 @@
 #include "stdafx.h"
 #include "PressX.h"
 
-using namespace px;
-
 #define MAX_LOADSTRING 100
 
 // Global Variables:
