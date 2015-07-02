@@ -51,6 +51,9 @@
     <ClInclude Include="src\map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\automata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PressX.cpp">

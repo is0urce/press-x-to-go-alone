@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "PressX.h"
+#include "automata.h"
 
 #define MAX_LOADSTRING 100
 
@@ -43,6 +44,10 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_PRESSX));
 
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
+
+	px::automata<bool> walls(100, 100);
+	walls.fill([]() { return std::rand() % 2 == 0 ? true : false; });
+	walls.execute<int>([](int acc, bool element) { return acc + (element ? 1 : 0); }, 0, [](int acc) { return acc > 4; }, 100);
 
 	// Main message loop:
 	while (GetMessage(&msg, NULL, 0, 0))

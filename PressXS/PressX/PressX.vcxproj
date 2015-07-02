@@ -75,6 +75,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\attribute.h" />
+    <ClInclude Include="src\automata.h" />
     <ClInclude Include="src\color.h" />
     <ClInclude Include="src\coordinate.h" />
     <ClInclude Include="src\enhancement.h" />

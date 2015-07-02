@@ -3,7 +3,7 @@
 // desc: class with implementation
 // auth: is0urce
 
-// desc: color with double precise float rgb components
+// color with real rgba components
 
 #pragma once
 
@@ -38,7 +38,7 @@ namespace px
 	public:
 		static color rgb(int r, int g, int b) { return color(r / 255.0, g / 255.0, b / 255.0); }
 		static color rgba(int r, int g, int b, int a) { return color(r / 255.0, g / 255.0, b / 255.0, a / 255.0); }
-		static color black() { return color(0, 0, 0, 1); }; 
+		static color black() { return color(0, 0, 0, 1); };
 		static color white() { return color(1, 1, 1, 1); };
 		static color transparent() { return color(0, 0, 0, 0); };
 
@@ -62,6 +62,7 @@ namespace px
 
 		template <typename _M>
 		void write(_M* memory) const { memory[0] = (_M)R; memory[1] = (_M)G; memory[2] = (_M)B; memory[3] = (_M)A; };
+		void write(component* memory) const { memory[0] = R; memory[1] = G; memory[2] = B; memory[3] = A; };
 		void set_rgba(int r, int g, int b, int a) { R = r / 255.0; G = g / 255.0; B = b / 255.0; A = a / 255.0; }
 		void set_rgb(int r, int g, int b) { R = r / 255.0; G = g / 255.0; B = b / 255.0; A = 1.0; }
 		void set_hex(unsigned int hex) { set_rgb(hex / 256 / 256 % 256, hex / 256 % 256, hex % 256); };
@@ -78,33 +79,33 @@ namespace px
 			double VSW = V * saturation * std::sin(hue * pi / 180.0);
 
 			color ret(in);
-			ret.R = (.299*V+.701*VSU+.168*VSW)*in.R
-				+ (.587*V-.587*VSU+.330*VSW)*in.G
-				+ (.114*V-.114*VSU-.497*VSW)*in.B;
-			ret.G = (.299*V-.299*VSU-.328*VSW)*in.R
-				+ (.587*V+.413*VSU+.035*VSW)*in.G
-				+ (.114*V-.114*VSU+.292*VSW)*in.B;
-			ret.B = (.299*V-.3*VSU+1.25*VSW)*in.R
-				+ (.587*V-.588*VSU-1.05*VSW)*in.G
-				+ (.114*V+.886*VSU-.203*VSW)*in.B;
+			ret.R = (.299*V + .701*VSU + .168*VSW)*in.R
+				+ (.587*V - .587*VSU + .330*VSW)*in.G
+				+ (.114*V - .114*VSU - .497*VSW)*in.B;
+			ret.G = (.299*V - .299*VSU - .328*VSW)*in.R
+				+ (.587*V + .413*VSU + .035*VSW)*in.G
+				+ (.114*V - .114*VSU + .292*VSW)*in.B;
+			ret.B = (.299*V - .3*VSU + 1.25*VSW)*in.R
+				+ (.587*V - .588*VSU - 1.05*VSW)*in.G
+				+ (.114*V + .886*VSU - .203*VSW)*in.B;
 
 			return ret;
 		}
-		static color transform_hue(const color &in, double angle) 
+		static color transform_hue(const color &in, double angle)
 		{
 			double U = std::cos(angle * pi / 180.0);
 			double W = std::sin(angle * pi / 180.0);
 
 			color ret(in);
-			ret.R = (.299 + .701*U+.168*W) * in.R
-				+ (.587 -.587*U+.330*W) * in.G
-				+ (.114 -.114*U-.497*W) * in.B;
-			ret.G = (.299 -.299*U-.328*W) * in.R
-				+ (.587 + .413*U+.035*W) * in.G
-				+ (.114 -.114*U+.292*W) * in.B;
-			ret.B = (.299 -.3*U+1.25*W) * in.R
-				+ (.587 -.588*U-1.05*W) * in.G
-				+ (.114 + .886*U-.203*W) * in.B;
+			ret.R =	(.299 + .701*U + .168*W) * in.R
+				+ (.587 - .587*U + .330*W) * in.G
+				+ (.114 - .114*U - .497*W) * in.B;
+			ret.G = (.299 - .299*U - .328*W) * in.R
+				+ (.587 + .413*U + .035*W) * in.G
+				+ (.114 - .114*U + .292*W) * in.B;
+			ret.B = (.299 - .3*U + 1.25*W) * in.R
+				+ (.587 - .588*U - 1.05*W) * in.G
+				+ (.114 + .886*U - .203*W) * in.B;
 
 			return ret;
 		}

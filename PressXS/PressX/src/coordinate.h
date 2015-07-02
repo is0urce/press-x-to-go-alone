@@ -3,7 +3,7 @@
 // desc: template class
 // auth: is0urce
 
-// template 2-d point
+// template 2-d coordinate with generic methods
 
 #pragma once
 

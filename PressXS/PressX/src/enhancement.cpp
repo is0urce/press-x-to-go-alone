@@ -1,3 +1,8 @@
+// name: enhancement.cpp
+// type: c++
+// desc: class implementation
+// auth: is0urce
+
 #include "stdafx.h"
 
 #include "enhancement.h"

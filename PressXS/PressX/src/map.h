@@ -18,7 +18,7 @@ namespace px
 	{
 		// friend with maps with different element type
 		template<typename _C>
-		friend class Map;
+		friend class map;
 
 	public:
 		typedef _T element;
@@ -77,7 +77,7 @@ namespace px
 		bool in_range(const point &position) const { return position.in_range(m_range); };
 		void swap(map &that)
 		{
-			std::swap(_range, that._range);
+			std::swap(m_range, that.m_range);
 			m_tiles.swap(that.m_tiles);
 		}
 		void resize(const point &range)

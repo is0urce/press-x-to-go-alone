@@ -3,6 +3,8 @@
 // desc: enum
 // auth: is0urce
 
+// enum for statistics attributes
+
 #pragma once
 
 namespace px
