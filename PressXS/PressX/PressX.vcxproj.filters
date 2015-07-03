@@ -98,9 +98,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lib\glew32.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Library Include="lib\glew32.lib" />
   </ItemGroup>
 </Project>
