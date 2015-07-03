@@ -111,7 +111,14 @@
     <Image Include="src\small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\glew32.lib" />
+    <None Include="lib\glew32.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\glew32.lib">
+      <DeploymentContent>false</DeploymentContent>
+    </Library>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

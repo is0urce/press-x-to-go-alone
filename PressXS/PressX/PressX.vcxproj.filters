@@ -9,24 +9,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="main">
+      <UniqueIdentifier>{72ae17bb-b854-4c9d-bab6-628934f934bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\PressX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -60,14 +51,20 @@
     <ClInclude Include="src\wingl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\targetver.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PressX.h">
+      <Filter>main</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\PressX.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\statistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -80,19 +77,28 @@
     <ClCompile Include="src\wingl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PressX.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\PressX.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>main\Resource Files</Filter>
     </Image>
     <Image Include="src\small.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>main\Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\PressX.rc">
-      <Filter>Resource Files</Filter>
+      <Filter>main\Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\glew32.dll" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glew32.lib" />

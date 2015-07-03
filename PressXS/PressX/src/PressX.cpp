@@ -3,11 +3,12 @@
 
 #include "stdafx.h"
 #include "PressX.h"
-#include "automata.h"
+#include "wingl.h"
 
 #define MAX_LOADSTRING 100
 
 // Global Variables:
+HWND hWnd;
 HINSTANCE hInst;								// current instance
 TCHAR szTitle[MAX_LOADSTRING];					// The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
@@ -45,9 +46,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 
-	px::automata<bool> walls(100, 100);
-	walls.fill([]() { return std::rand() % 2 == 0 ? true : false; });
-	walls.execute<int>([](int acc, bool element) { return acc + (element ? 1 : 0); }, 0, [](int acc) { return acc > 4; }, 100);
+	px::shell::wingl graphics(hWnd);
 
 	// Main message loop:
 	while (GetMessage(&msg, NULL, 0, 0))
@@ -102,8 +101,6 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
-   HWND hWnd;
-
    hInst = hInstance; // Store instance handle in our global variable
 
    hWnd = CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
