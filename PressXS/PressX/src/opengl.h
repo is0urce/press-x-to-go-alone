@@ -1,4 +1,4 @@
-// name: "ogl.h"
+// name: "opengl.h"
 // type: c++ header
 // desc: class declaration
 // auth: is0urce

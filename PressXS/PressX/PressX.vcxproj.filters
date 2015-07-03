@@ -63,6 +63,9 @@
     <ClInclude Include="src\PressX.h">
       <Filter>main</Filter>
     </ClInclude>
+    <ClInclude Include="src\renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\statistics.cpp">
@@ -82,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="src\PressX.cpp">
       <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

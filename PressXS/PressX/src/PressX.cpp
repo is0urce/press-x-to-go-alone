@@ -4,6 +4,10 @@
 #include "stdafx.h"
 #include "PressX.h"
 #include "wingl.h"
+#include "renderer.h"
+
+using namespace px;
+using namespace px::shell;
 
 #define MAX_LOADSTRING 100
 
@@ -46,7 +50,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 
-	px::shell::wingl graphics(hWnd);
+	renderer graphics(std::move(renderer::opengl_handle(new wingl(hWnd))));
 
 	// Main message loop:
 	while (GetMessage(&msg, NULL, 0, 0))
@@ -56,6 +60,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
+		graphics.draw(0);
 	}
 
 	return (int) msg.wParam;

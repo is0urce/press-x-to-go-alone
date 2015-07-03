@@ -1,4 +1,4 @@
-﻿// name: ogl.cpp
+﻿// name: opengl.cpp
 // type: c++
 // desc: class implementation
 // auth: is0urce
@@ -23,7 +23,7 @@ void opengl::update(int &screen_width, int &screen_height)
 	update_screen(screen_width, screen_height);
 };
 
-void opengl::swap_buffers()
+void opengl::swap()
 {
 	swap_buffers();
 };

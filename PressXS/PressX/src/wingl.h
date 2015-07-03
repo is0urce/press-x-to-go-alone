@@ -1,10 +1,9 @@
-// name: "ogl.h"
+// name: "wingl.h"
 // type: c++ header
 // desc: class declaration
 // auth: is0urce
 
-// base platform-specific opengl graphics handling
-// You shold call Bind or constuct with HWND param
+// windows-specific opengl graphics
 
 #pragma once
 

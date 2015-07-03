@@ -1,4 +1,4 @@
-﻿// name: ogl.cpp
+﻿// name: wingl.cpp
 // type: c++
 // desc: class implementation
 // auth: is0urce
