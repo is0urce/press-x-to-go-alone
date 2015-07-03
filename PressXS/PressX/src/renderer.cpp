@@ -24,7 +24,8 @@ renderer::~renderer()
 void renderer::draw(double span)
 {
 	m_opengl->update(m_width, m_height);
-	m_aspect = (double)m_width / m_height;
+	m_aspect = m_width;
+	m_aspect /= m_height;
 
 	m_opengl->swap();
 }

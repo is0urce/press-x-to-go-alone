@@ -96,6 +96,7 @@
     <ClInclude Include="src\statistics.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\vao.h" />
     <ClInclude Include="src\vector.h" />
     <ClInclude Include="src\wingl.h" />
   </ItemGroup>
